@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+
+    }
+    html{
+    scroll-behavior: smooth;
+}
+  body::-webkit-scrollbar {
+    width: 0; 
+  } 
+    body{
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .most-wanted::-webkit-scrollbar {
+    appearance: none;
+    
+  } 
+
+  .initial-scroll-animate{
+   
+   transition: 3s;
+}
+
+.reveal-scroll-animate{
+   opacity: 0;
+} 
+
+
+
+
+</style>
+</head>
+<body>
+    <!--Discount-->
+    <div id="offer" class="p-1 text-center text-sm bg-slate-600 text-white flex items-center justify-center md:text-2xl">
+        <p>Sign Up and <b> GET 20% OFF </b> for your first order</p>
+        <i id="close-offer" class="fa-solid fa-xmark ml-3 cursor-pointer pl-3"></i>
+
+    </div>
+
+    <!--navbar-->
+    <nav class="flex justify-between bg-slate-100 z-40 text-gray-800 sticky top-0 p-3" >
+        <h1 class="text-2xl font-bold ml-1">Nostra</h1>
+        <div class="flex justify-around align-middle w-[50%] hidden md:flex" >
+            <p><a class="no-underline hover:underline decoration-solid" href="index.html">Home</a></p>
+            <p><a class="no-underline hover:underline decoration-solid" href="#new-arrival">New Arrival</a></p>
+            <p><a class="no-underline hover:underline decoration-solid" href="#most-wanted">Most Wanted</a></p>
+            <p><a class="no-underline hover:underline decoration-solid" href="collection.html">Collections</a></p>
+            <p><a class="no-underline hover:underline decoration-solid" href="./contactus.html">Contact Us</a></p>
+
+
+        </div>
+        <div class="inline md:hidden">
+            <i id="side-navbar-activate" class="fa-solid fa-bars right-2 cursor-pointer"></i>
+    </nav>
+
+        
+
+    <!--side nav-->
+    <div id="side-nav" class="fixed w-[50%] text-white left-0 top-0 bg-gray-700 ml[40%] p-[20px] duration-700 z-50 h-[100%] hidden ">
+        <p class="text-right cursor-pointer"><i id="side-navbar-close" class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="pt-5 mt-5 flex flex-col gap-6">
+
+            <p><a class="no-underline pt-2 hover:underline" href="./index.html">Home</a></p>
+            <p><a class="no-underline pt-2 hover:underline" href="#new-arrival">New Arrival</a></p>
+            <p><a class="no-underline pt-2 hover:underline" href="#most-wanted">Most Wanted</a></p>
+            <p><a class="no-underline pt-2 hover:underline" href="./collection.html">Collections</a></p>
+            <p><a class="no-underline pt-2 hover:underline" href="./contactus.html">Contact Us</a></p>
+        </div>
+    </div>
+    <!--slide content-->
+    <section class="overflow-hidden relative flex w-[98.5%] rounded-md p-4 ">
+        <div class="absolute top-[35%] left-[5%] z-10">
+            <i id="slider-left-activate" class="fa-solid fa-angle-left" style="color: #ffffff; font-size: 10vw;">
+            </i>
+ 
+
+        </div>
+        <div id="slider-content" class="absolute text-white text-center w-[100%] top-[20%]">
+            <h1 class="font-bold text text-[5vw] max-md:text-2xl">Level up your style with our</h1>
+            <h4 class="text-xl max-md:text-sm">Summer Collections</h4> 
+            <button class="bg-white text-gray-700 mt-2 px-4 text-xl rounded-md py-3 max-md:text-xs"> Shop Now <i class="fa-solid fa-arrow-right"></i> </button>
+        </div>
+        <div class="flex duration-1000 slider-image-container">
+            <img class="w-[100vw] h-[70vh] max-md:h-[180px]" src="img/others/slider-three.jpg"  width="100%" alt="">
+            <img class="w-[100vw] h-[70vh] max-md:h-[180px]" src="img/others/slider-one.jpg" width="100%" alt="">
+            <img class="w-[100vw] h-[70vh] max-md:h-[180px]" src="img/others/slider-two.jpg"  width="100%"alt="">
+
+
+        </div>
+        <div id="side-right-button" class="absolute top-[35%] right-[5%]">
+                
+            <i id="slider-right-activate" class="fa-solid fa-angle-right" style="color: #ffffff; font-size: 10vw;"></i>
+        </div>
+
+    </section>
+    <!--Brands-->
+    <h1 class="mt-[3vw] font-bold text-2xl p-2 max-md:text-sm">Brands</h1>
+    <section class="flex mt-[2vw] justify-between px-4">
+        
+        <div class="flex items-center flex-col text-2xl">
+            <img class="items-center w-[4vw]" src="img/icons/adidas.png" alt="">
+            <p class="max-md:text-sm">Adidas</p>
+        </div>
+
+        <div class="flex items-center flex-col text-2xl">
+            <img class="items-center w-[4vw]" src="img/icons/simple.png" alt="">
+            <p class="max-md:text-sm">Simple</p>
+        </div>
+        <div class="flex items-center flex-col text-2xl">
+            <img class="items-center w-[4vw]" src="img/icons/behance.png" alt="">
+            <p class="max-md:text-sm">Puma</p>
+        </div>
+
+       
+
+        <div class="flex items-center flex-col text-2xl">
+            <img class="items-center w-[4vw]" src="img/icons/twitch.png" alt="">
+            <p class="max-md:text-sm">Twitch</p>
+        </div>
+
+        <div class="flex items-center flex-col text-2xl">
+            <img class="items-center w-[4vw]" src="img/icons/leaves.png" alt="">
+            <p class="max-md:text-sm">Leaves</p>
+        </div>
+        <div class="flex items-center flex-col text-2xl">
+            <img class="items-center w-[4vw]" src="img/icons/behance.png" alt="">
+            <p class="max-md:text-sm">Behance</p>
+        </div>
+
+    </section>
+
+    <!--Service-->
+    <div class="initial-scroll-animate reveal-scroll-animate">
+        <div class="service mx-2">
+            
+            <div class="servives-container-1 mt-[5vw] mb-[2vw] flex justify-between items-center text-2xl">
+                <div class="font-semibold max-md:text-xl">
+                    <h2>We Provide Best</h2>
+                    <h2>Customer Experiences</h2>
+                </div>
+
+                <div class="max-md:text-sm">
+                    <p>|| We ensure that our customer have the best shopping experience</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+                <div class="rounded-md bg-[#F2F4F7] p-3">
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-circle-check"></i>
+                    <h4 class="text-sm font-bold">Original Products</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+                <div class="rounded-md bg-[#F2F4F7] p-3">
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-face-smile"></i>
+                    <h4 class="text-sm font-bold">Satisfaction Guarantee</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+
+                <div class="rounded-md bg-[#F2F4F7] p-3">
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-solid fa-broom"></i>
+                    <h4 class="text-sm font-bold">New Arrival Everyday</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+
+                <div class="rounded-md bg-[#F2F4F7] p-3">
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-solid fa-truck-fast"></i>
+                    <h4 class="text-sm font-bold">Fast & Free Shipping</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--New arivals-->
+    <div class="initial-scroll-animate reveal-scroll-animate"> 
+        <h2 id="new-arrival" class="mt-[5vw] flex justify-between font-bold text-xl pl-3">New Arrivals</h2>
+        <div class="flex justify-between mt-[2vw] mx-3">
+            <div class="relative">
+                <img class="w-[20vw] rounded-2xl" src="img/products/f1.jpg" alt="">
+                <div class="rounded-xl absolute w-[100%] h-[100%] bg-black z-20 top-0" style="opacity: 0.6;"></div>
+                <button class="px-[10%] py-[5%] mt-10px text-[1.2vw] text-gray-700 rounded-md absolute border border-none top-[50%] left-[18%] z-20 bg-white"> Shop Now <i class="fa-solid fa-arrow-right"></i> </button>
+
+            </div>
+            <div class="relative">
+
+                <img style="width: 20vw;" src="img/products/f7.jpg" alt="">
+                <div class="rounded-xl absolute w-[100%] h-[100%] bg-black z-20 top-0" style="opacity: 0.6;"></div>
+                <button class="px-[10%] py-[5%] mt-10px text-[1.2vw] text-gray-700 rounded-md absolute border border-none top-[50%] left-[18%] z-20 bg-white"> Shop Now <i class="fa-solid fa-arrow-right"></i> </button>
+
+            </div>
+
+            <div class="relative">
+
+                <img style="width: 20vw;" src="img/products/n1.jpg" alt="">
+                <div class="rounded-xl absolute w-[100%] h-[100%] bg-black z-20 top-0" style="opacity: 0.6;"></div>
+                <button class="px-[10%] py-[5%] mt-10px text-[1.2vw] text-gray-700 rounded-md absolute border border-none top-[50%] left-[18%] z-20 bg-white"> Shop Now <i class="fa-solid fa-arrow-right"></i> </button>
+
+            </div>
+
+                      <div class="relative">
+
+                <img style="width: 20vw;" src="img/products/n7.jpg" alt="">
+                <div class="rounded-xl absolute w-[100%] h-[100%] bg-black z-20 top-0" style="opacity: 0.6;"></div>
+                <button class="px-[10%] py-[5%] mt-10px text-[1.2vw] text-gray-700 rounded-md absolute border border-none top-[50%] left-[18%] z-20 bg-white"> Shop Now <i class="fa-solid fa-arrow-right"></i> </button>
+
+            </div>
+        </div>
+
+    </div>
+    <!--most wanted-->
+    <div class="initial-scroll-animate reveal-scroll-animate ">
+        <h2 id="most-wanted" class="mt-[5vw] font-bold text-xl mx-3 mb-2">Most Wanted</h2>
+
+        <div class="most-wanted flex justify-between items-center overflow-x-scroll mx-3 " style="gap: 20px;">
+
+            <div class=" relative flex-none w-[20vw]">
+                <img class="rounded-md" src="img/products/n8.jpg" alt="">
+                <p class="absolute top-1 left-1 text-[2vw] bg-red-600 text-white px-[10px] rounded-md">sale</p>
+                <img class="like-button absolute w-[15%] bottom-[12%] right-[5%]" src="img/icons/blackheart.png" alt="">
+
+            </div>
+
+            <div class="relative flex-none w-[20vw]">
+                <img class="w-[20vw] rounded-md" src="img/products/f1.jpg" alt="">
+                
+                <p class="absolute top-1 left-1 text-[2vw] bg-red-600 text-white px-[10px] rounded-md">sale</p>
+                <img class="like-button absolute w-[15%] bottom-[12%] right-[5%]" src="img/icons/blackheart.png" alt="">
+            </div>
+
+            <div class="relative flex-none w-[20vw]">
+                <img class="w-[20vw] rounded-md" src="img/products/n1.jpg" alt="">
+                <p class="absolute top-1 left-1 text-[2vw] bg-red-600 text-white px-[10px] rounded-md">sale</p>
+                <img class="like-button absolute w-[15%] bottom-[12%] right-[5%]" src="img/icons/blackheart.png" alt="">
+                
+
+            </div>
+
+            <div class="relative flex-none w-[20vw]">
+                <img class="w-[20vw] rounded-md" src="img/products/n7.jpg" alt="">
+                <p class="absolute top-1 left-1 text-[2vw] bg-red-600 text-white px-[10px] rounded-md">sale</p>
+                <img class="like-button absolute w-[15%] bottom-[12%] right-[5%]" src="img/icons/blackheart.png" alt="">
+                
+
+            </div>
+            
+            <div class="relative flex-none w-[20vw]">
+                <img class="w-[20vw] rounded-md" src="img/products/n3.jpg" alt="">
+                <p class="absolute top-1 left-1 text-[2vw] bg-red-600 text-white px-[10px] rounded-md">sale</p>
+                <img class="like-button absolute w-[15%] bottom-[12%] right-[5%]" src="img/icons/blackheart.png" alt="">
+
+            </div>
+
+            <div class="relative flex-none w-[20vw]">
+                <img class="w-[20vw] rounded-md" src="img/products/f7.jpg" alt="">
+                
+                <p class="absolute top-1 left-1 text-[2vw] bg-red-600 text-white px-[10px] rounded-md">sale</p>
+                <img class="like-button absolute w-[15%] bottom-[12%] right-[5%]" src="img/icons/blackheart.png" alt="">
+            </div>
+
+            <div class="relative flex-none w-[20vw]">
+                <img class="w-[20vw] rounded-md" src="img/products/n4.jpg" alt="">
+                <p class="absolute top-1 left-1 text-[2vw] bg-red-600 text-white px-[10px] rounded-md">sale</p>
+                <img class="like-button absolute w-[15%] bottom-[12%] right-[5%]" src="img/icons/blackheart.png" alt="">
+                
+
+            </div>
+
+            <div class="relative flex-none w-[20vw]">
+                <img class="w-[20vw] rounded-md" src="img/products/n7.jpg" alt="">
+                <p class="absolute top-1 left-1 text-[2vw] bg-red-600 text-white px-[10px] rounded-md">sale</p>
+                <img class="like-button absolute w-[15%] bottom-[12%] right-[5%]" src="img/icons/blackheart.png" alt="">
+                
+
+            </div>
+        </div>
+    </div>
+    <!--Limited offer-->
+    <div class="initial-scroll-animate reveal-scroll-animate">
+
+    
+
+        <div class="flex justify-center items-center bg-gray-700 text-white p-5 text-[2vw] my-3">
+            <div class="limited-offer-img">
+                <img class="w-[100%] h-[100%]" src="img/others/offer.jpg" alt="">
+            </div>
+            <div class="p-[5%]">
+                <h2 class="text-4xl font-bold max-md:text-xl">Limited Offer</h2>
+                <h4 class="text-3xl my-2 font-bold max-md:text-sm">35% OFF on this for the first 30 Customers</h4>
+                <button class="bg-white text-gray-700 mt-2 px-4 text-xl rounded-md py-3 max-md:text-xs"> Shop Now <i class="fa-solid fa-arrow-right"></i> </button>
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+
+
+
+    <section class="text-center">
+        <h1 class="text-3xl font-bold mt-5 text-center">Join our News Letter</h1>
+        <p>Sign for our email newspaper to get exclusive discounts, updates, and more</p>
+        <input type="text" class="border border-black p-2 m-3" style="width: 80%;"><br>
+<button class="bg-black text-white p-3 m-1 underline">Subscribe</button>
+    </section>
+    <!---Footer-->
+    <div class="text-[2vw] mt-[5vw] p-6 bg-gray-700 text-white box-border">
+        <div class="flex items-center flex-wrap">
+            <div class="flex flex-col">
+                <h2 class="text-4xl font-bold max-md:text-2xl ">Nostra</h2>
+                <p class="py-3">The Standard chunk of Lorem ipsum
+                    used since the 1500s is reprodused
+                    below for those interest</p>
+                    <div class="footer-icon-container">
+                        <i class="px-5 icon fa-brands fa-instagram" style="color: #ffffff;"></i>
+                        <i class="px-5 icon fa-brands fa-twitter" style="color: #ffffff;"></i>
+                        <i class="px-5 icon fa-brands fa-facebook" style="color: #ffffff;"></i>
+                    </div>
+
+            </div>
+        </div>
+        
+        <p class="subtitle my-4">@ 2023 Nostra.com</p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
